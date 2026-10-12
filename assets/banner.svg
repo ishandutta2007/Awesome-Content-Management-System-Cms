@@ -1,0 +1,207 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="100%" style="border-radius: 12px; background: #0b0f19;">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0e1a"/>
+      <stop offset="50%" stop-color="#121829"/>
+      <stop offset="100%" stop-color="#1e1136"/>
+    </linearGradient>
+
+    <linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+
+    <linearGradient id="glowGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="glowGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.02"/>
+    </linearGradient>
+
+    <!-- Filters -->
+    <filter id="blurFilter" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="60"/>
+    </filter>
+  </defs>
+
+  <style>
+    .title-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 800;
+      font-size: 46px;
+      fill: #ffffff;
+      letter-spacing: -0.5px;
+    }
+    .badge-sub {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      fill: #38bdf8;
+    }
+    .desc-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 400;
+      font-size: 17px;
+      fill: #94a3b8;
+    }
+    .card-title {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      fill: #e2e8f0;
+    }
+    .card-meta {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-weight: 400;
+      font-size: 12px;
+      fill: #64748b;
+    }
+
+    /* Subtle Animated Flows */
+    @keyframes pulseOrb {
+      0%, 100% { transform: scale(1) translate(0px, 0px); opacity: 0.5; }
+      50% { transform: scale(1.15) translate(-20px, 15px); opacity: 0.8; }
+    }
+    @keyframes pulseOrb2 {
+      0%, 100% { transform: scale(1) translate(0px, 0px); opacity: 0.4; }
+      50% { transform: scale(1.2) translate(25px, -15px); opacity: 0.7; }
+    }
+    @keyframes floatCard1 {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
+    }
+    @keyframes floatCard2 {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+    @keyframes floatCard3 {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-7px); }
+    }
+    @keyframes flowLine {
+      0% { stroke-dashoffset: 100; }
+      100% { stroke-dashoffset: 0; }
+    }
+
+    .glow-orb-1 {
+      animation: pulseOrb 8s ease-in-out infinite;
+      transform-origin: 200px 100px;
+    }
+    .glow-orb-2 {
+      animation: pulseOrb2 10s ease-in-out infinite;
+      transform-origin: 1000px 250px;
+    }
+    .f-card-1 {
+      animation: floatCard1 6s ease-in-out infinite;
+    }
+    .f-card-2 {
+      animation: floatCard2 7s ease-in-out infinite;
+    }
+    .f-card-3 {
+      animation: floatCard3 5.5s ease-in-out infinite;
+    }
+    .flow-path {
+      stroke-dasharray: 8 6;
+      animation: flowLine 20s linear infinite;
+    }
+  </style>
+
+  <!-- Background Layer -->
+  <rect width="1200" height="360" fill="url(#bgGrad)"/>
+
+  <!-- Dynamic Glowing Orbs in Background -->
+  <g filter="url(#blurFilter)">
+    <circle class="glow-orb-1" cx="240" cy="120" r="140" fill="url(#glowGrad2)" />
+    <circle class="glow-orb-2" cx="980" cy="220" r="180" fill="url(#glowGrad1)" />
+  </g>
+
+  <!-- Grid overlay -->
+  <g opacity="0.08" stroke="#ffffff" stroke-width="1">
+    <line x1="0" y1="60" x2="1200" y2="60" />
+    <line x1="0" y1="120" x2="1200" y2="120" />
+    <line x1="0" y1="180" x2="1200" y2="180" />
+    <line x1="0" y1="240" x2="1200" y2="240" />
+    <line x1="0" y1="300" x2="1200" y2="300" />
+    <line x1="200" y1="0" x2="200" y2="360" />
+    <line x1="400" y1="0" x2="400" y2="360" />
+    <line x1="600" y1="0" x2="600" y2="360" />
+    <line x1="800" y1="0" x2="800" y2="360" />
+    <line x1="1000" y1="0" x2="1000" y2="360" />
+  </g>
+
+  <!-- Animated Stream Lines / Connectivity in background -->
+  <path class="flow-path" d="M 50 310 C 300 310, 500 240, 750 240 C 950 240, 1050 180, 1150 120" fill="none" stroke="#6366f1" stroke-width="2" opacity="0.35"/>
+  <path class="flow-path" d="M 80 50 C 350 50, 480 140, 780 140 C 980 140, 1080 80, 1180 80" fill="none" stroke="#38bdf8" stroke-width="1.5" opacity="0.3"/>
+
+  <!-- Floating Cards (Dynamic background elements positioned to the right so title stays unobstructed) -->
+  <g class="f-card-1" transform="translate(860, 40)">
+    <rect width="280" height="74" rx="12" fill="url(#cardGrad)" stroke="#ffffff" stroke-opacity="0.12" stroke-width="1"/>
+    <rect x="16" y="20" width="34" height="34" rx="8" fill="#38bdf8" fill-opacity="0.15"/>
+    <text x="25" y="42" font-size="16" fill="#38bdf8">⚡</text>
+    <text x="62" y="36" class="card-title">Headless &amp; API-First</text>
+    <text x="62" y="54" class="card-meta">Strapi • Payload • Contentful • Sanity</text>
+  </g>
+
+  <g class="f-card-2" transform="translate(890, 134)">
+    <rect width="270" height="74" rx="12" fill="url(#cardGrad)" stroke="#ffffff" stroke-opacity="0.12" stroke-width="1"/>
+    <rect x="16" y="20" width="34" height="34" rx="8" fill="#818cf8" fill-opacity="0.15"/>
+    <text x="25" y="42" font-size="16" fill="#818cf8">🌐</text>
+    <text x="62" y="36" class="card-title">Monolithic &amp; Publishing</text>
+    <text x="62" y="54" class="card-meta">WordPress • Ghost • Drupal • Wagtail</text>
+  </g>
+
+  <g class="f-card-3" transform="translate(840, 228)">
+    <rect width="290" height="74" rx="12" fill="url(#cardGrad)" stroke="#ffffff" stroke-opacity="0.12" stroke-width="1"/>
+    <rect x="16" y="20" width="34" height="34" rx="8" fill="#c084fc" fill-opacity="0.15"/>
+    <text x="25" y="42" font-size="16" fill="#c084fc">🚀</text>
+    <text x="62" y="36" class="card-title">Jamstack &amp; Git-Based</text>
+    <text x="62" y="54" class="card-meta">Hugo • Astro • Grav • Decap • Tina</text>
+  </g>
+
+  <!-- Foreground Title and Main Content Area (Unobstructed & Crisp) -->
+  <g transform="translate(80, 0)">
+    <!-- Pill Category Label -->
+    <g transform="translate(0, 52)">
+      <rect width="260" height="28" rx="14" fill="#38bdf8" fill-opacity="0.12" stroke="#38bdf8" stroke-opacity="0.3" stroke-width="1"/>
+      <text x="18" y="19" class="badge-sub">✦ CURATED CMS DIRECTORY</text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="0" y="135" class="title-text">Awesome Content<tspan fill="url(#brandGrad)"> Management Systems</tspan></text>
+
+    <!-- Subtitle / Value Proposition -->
+    <text x="0" y="180" class="desc-text">The definitive guide to Headless CMS, Enterprise SaaS &amp; Open-Source publishing platforms.</text>
+    <text x="0" y="208" class="desc-text">Curated with real pricing tiers, market valuations, GitHub stars, and architectural comparisons.</text>
+
+    <!-- Feature Tags -->
+    <g transform="translate(0, 248)">
+      <!-- Pill 1 -->
+      <rect x="0" y="0" width="160" height="32" rx="16" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.1" stroke-width="1"/>
+      <text x="16" y="21" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500" fill="#cbd5e1">☁️ SaaS &amp; Enterprise</text>
+
+      <!-- Pill 2 -->
+      <rect x="175" y="0" width="170" height="32" rx="16" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.1" stroke-width="1"/>
+      <text x="191" y="21" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500" fill="#cbd5e1">💻 100% Open Source</text>
+
+      <!-- Pill 3 -->
+      <rect x="360" y="0" width="160" height="32" rx="16" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.1" stroke-width="1"/>
+      <text x="376" y="21" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500" fill="#cbd5e1">📊 Market Dynamics</text>
+
+      <!-- Pill 4 -->
+      <rect x="535" y="0" width="150" height="32" rx="16" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.1" stroke-width="1"/>
+      <text x="551" y="21" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500" fill="#cbd5e1">⭐ Star History</text>
+    </g>
+  </g>
+</svg>
